@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Us About You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        .form-box h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-box input, .form-box select {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .form-box button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-box button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Personalize Your Fitness Plan</h2>
+        <form method="POST" action="/collect-data">
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="number" name="height" placeholder="Height (cm)" required>
+            <input type="number" name="weight" placeholder="Weight (kg)" required>
+            <input type="number" step="0.1" name="fat_percentage" placeholder="Fat % (optional)">
+            <input type="text" name="goal" placeholder="Your Fitness Goal (e.g. Build Muscle)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

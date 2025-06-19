@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Set Custom Goal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='plans_advanced.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>🎯 Override Your Plan Goal</h2>
+    <form method="POST">
+      <select name="goal" required>
+        <option value="" disabled selected>Select your goal</option>
+        <option value="muscle gain">Muscle Gain</option>
+        <option value="fat loss">Fat Loss</option>
+        <option value="maintenance">Maintenance</option>
+      </select><br><br>
+      <button type="submit" class="back-btn">Update Goal</button>
+    </form>
+    <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+  </div>
+</body>
+</html>

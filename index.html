@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Set Fit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='video/fitness_bg_short.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Overlay content -->
+    <div class="overlay">
+        <div class="left-box animate__animated animate__fadeInLeft">
+            <h1>Welcome to <span>Get Set Fit</span></h1>
+            <p>Your fitness journey starts here. Choose your path:</p>
+            <div class="buttons">
+                <a href="/login" class="btn">Login</a>
+                <a href="/signup" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollable Info Section -->
+    <section class="info-section">
+        <h2>Why Get Set Fit?</h2>
+        <p>We provide personalized workout and diet plans tailored to your goals.</p>
+        <p>Track your BMI, manage calories, and achieve your fitness transformation with ease.</p>
+        <p>Powered by smart AI guidance and expert-approved recommendations.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Get Set Fit. All rights reserved.</p>
+    </footer>
+</body>
+</html>

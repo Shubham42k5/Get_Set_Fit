@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile | Get Set Fit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #00b894, #55efc4);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1s ease;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #fff;
+            animation: slideUp 1s ease;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            font-size: 16px;
+        }
+
+        .info i {
+            width: 30px;
+            text-align: center;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #dfe6e9;
+        }
+
+        .info span {
+            font-weight: 600;
+            margin-right: 8px;
+            color: #dfe6e9;
+        }
+
+        .info p {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #00cec9;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0984e3;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2><i class="fas fa-user-circle"></i> Your Profile</h2>
+
+    <div class="info"><i class="fas fa-venus-mars"></i><span>Gender:</span><p>{{ gender }}</p></div>
+    <div class="info"><i class="fas fa-birthday-cake"></i><span>Age:</span><p>{{ age }}</p></div>
+    <div class="info"><i class="fas fa-ruler-vertical"></i><span>Height:</span><p>{{ height }} cm</p></div>
+    <div class="info"><i class="fas fa-weight"></i><span>Weight:</span><p>{{ weight }} kg</p></div>
+    <div class="info"><i class="fas fa-percent"></i><span>Body Fat %:</span><p>{{ fat }}</p></div>
+    <div class="info"><i class="fas fa-heartbeat"></i><span>BMI:</span><p>{{ bmi }} ({{ bmi_status }})</p></div>
+    <div class="info"><i class="fas fa-bullseye"></i><span>Goal:</span><p>{{ goal }}</p></div>
+
+    <a href="/dashboard" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+</div>
+
+</body>
+</html>
