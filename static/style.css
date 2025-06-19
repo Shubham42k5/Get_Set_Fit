@@ -1,0 +1,70 @@
+/* static/style.css */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    width: 350px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #00b894;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #019170;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #00b894;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .links a {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #00b894;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+  
