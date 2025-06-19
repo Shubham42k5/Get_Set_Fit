@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Muscle Map - Get Set Fit{% endblock %}
+
+{% block content %}
+<h2 style="text-align:center;">Select a Muscle Group</h2>
+<div style="max-width: 600px; margin: auto; padding: 20px;">
+    <svg viewBox="0 0 220 500" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Example clickable areas -->
+        <a xlink:href="/exercises/chest">
+            <rect x="80" y="100" width="60" height="30" fill="#f66" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/arms">
+            <rect x="40" y="100" width="30" height="100" fill="#c66" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/arms">
+            <rect x="150" y="100" width="30" height="100" fill="#c66" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/abs">
+            <rect x="90" y="140" width="40" height="60" fill="#6cf" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/legs">
+            <rect x="80" y="210" width="25" height="100" fill="#6f6" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/legs">
+            <rect x="115" y="210" width="25" height="100" fill="#6f6" cursor="pointer" />
+        </a>
+        <a xlink:href="/exercises/back">
+            <rect x="80" y="50" width="60" height="30" fill="#999" cursor="pointer" />
+        </a>
+    </svg>
+</div>
+{% endblock %}

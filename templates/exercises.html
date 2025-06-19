@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ muscle.title() }} Exercises - Get Set Fit{% endblock %}
+
+{% block content %}
+<h2 style="text-align:center;">{{ muscle.title() }} Exercises</h2>
+<ul>
+    {% for ex in exercises %}
+        <li>{{ ex }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

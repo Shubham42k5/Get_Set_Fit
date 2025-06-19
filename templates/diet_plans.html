@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ goal }} Diet Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='plans_advanced.css') }}">
+</head>
+<body>
+  <header class="hero" style="background-image: url('https://source.unsplash.com/featured/?healthy-food');">
+    <div class="overlay">
+      <h1>{{ goal }} Diet Plan</h1>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="plan-section">
+      <h2>Nutrition Focus</h2>
+      <p>
+        Your meal plan emphasizes <strong>{{ goal }}</strong> through smart food choices and balanced macronutrients.
+        It's designed for energy, recovery, and long-term results.
+      </p>
+    </section>
+
+    <section class="plan-section">
+      <h2>🥗 Sample Meals & Guidelines</h2>
+      <div class="cards">
+        {% for item in diet %}
+          <div class="card">{{ item }}</div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+  </main>
+</body>
+</html>

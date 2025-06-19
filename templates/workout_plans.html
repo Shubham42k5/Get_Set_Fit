@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ goal }} Workout Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='plans_advanced.css') }}">
+</head>
+<body>
+  <header class="hero" style="background-image: url('https://source.unsplash.com/featured/?workout,fitness');">
+    <div class="overlay">
+      <h1>{{ goal }} Workout Plan</h1>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="plan-section">
+      <h2>Workout Focus</h2>
+      <p>
+        This workout plan is tailored for <strong>{{ goal }}</strong> goals.
+        It balances training intensity and recovery to optimize your results and improve fitness.
+      </p>
+    </section>
+
+    <section class="plan-section">
+      <h2>🏋️ Sample Workouts & Schedule</h2>
+      <div class="cards">
+        {% for exercise in workout %}
+          <div class="card">{{ exercise }}</div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+  </main>
+</body>
+</html>

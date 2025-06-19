@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calorie & Macro Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='plans_advanced.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 Personalized Calorie & Macro Estimates</h1>
+
+    {% for label, values in data.items() %}
+      <div class="plan-section">
+        <h2>{{ label }}</h2>
+        <ul>
+          {% for key, val in values.items() %}
+            <li><strong>{{ key }}:</strong> {{ val }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+    <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+  </div>
+</body>
+</html>
+
